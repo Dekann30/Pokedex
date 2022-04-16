@@ -11,6 +11,9 @@
                 <li>
                     <%=allPokemon[pokemon].name%>
                     <a href="/pokedex/<%=pokemon%>"><img src="<%=allPokemon[pokemon].img%>" alt="<%=allPokemon[pokemon].name%>'s picture" width="90" height="90"></a>
+                    <form action="/pokedex/<%=pokemon%>?_method=delete" method="post">
+                    <input type="submit" value="Delete">
+                    </form>
                 </li>
            <% }%>
         </ul>

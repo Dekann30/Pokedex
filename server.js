@@ -28,6 +28,11 @@ app.get('/pokedex/new', (req,res)=>{
 })
 
 //Delete
+app.delete('/pokedex/:id', (req,res)=>{
+    const index = req.params.id
+    pokemon.splice(index, 1)
+    res.redirect('/pokedex')
+})
 
 //Update
 
