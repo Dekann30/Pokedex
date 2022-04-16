@@ -5,6 +5,7 @@
     <div class="main">
         <h1>Pokedex</h1>
         <button type="button" onclick='location.href="/pokedex/new"'>Add a Pokemon</button>
+        <button type="button" id="bottom">Jump to End</button>
         <ul>
             <% for(pokemon in allPokemon){ %>
                 <li>
@@ -13,6 +14,7 @@
                 </li>
            <% }%>
         </ul>
+        <button type="button" id="top">Jump to Top</button>
     </div>
 </body>
 </html>
