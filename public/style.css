@@ -23,7 +23,8 @@ h1{
 
 button,
 input[type=text],
-input[type=submit]{
+input[type=submit],
+::placeholder{
     background-color: white;
     color: #FF0000;
 }
@@ -64,4 +65,27 @@ img{
     justify-content: center;
     align-items: center;
     font-size: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+input[type=text]{
+    height: 40px;
+    width: 250px;
+    font-size: 25px;
+}
+
+.nav-button{
+    height: 35px;
+    font-size: 15px;
+font-weight: bold;
+}
+
+.show-img{
+    height: 350px;
 }
