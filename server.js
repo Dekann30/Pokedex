@@ -36,17 +36,11 @@ app.delete('/pokedex/:id', (req,res)=>{
 
 //Update
 app.put('/pokedex/:id', (req,res)=>{
-    editedPokemon = {
-        name: req.body.name,
-        id: req.body.id,
-        img: req.body.img,
-        type: req.body.type,
-        stats: {
-            hp: req.body.hp
-        }
-    }
-    Object.assign(editedPokemon, req.body)
+    const updatedPokemon = {...pokemon[req.params.id]}
+    pokemon[req.params.id] = updatedPokemon
+    Object.assign(updatedPokemon, req.body)
     res.redirect('/pokedex')
+    console.log(updatedPokemon)
 })
 
 //Create

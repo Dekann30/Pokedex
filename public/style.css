@@ -1,3 +1,67 @@
 body{
-    background-color: aquamarine;
+    background-color: #3B4CCA;
+    color: white
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: #FFDE00;
+    -webkit-text-stroke: 2px #0A285F;
+    font-family: Stencil Std, fantasy;
+    letter-spacing: 5px;
+}
+
+.top-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+button,
+input[type=text],
+input[type=submit]{
+    background-color: white;
+    color: #FF0000;
+}
+
+.pokebuttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+li{
+    marker:none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    border: 2px;
+    border-style: solid;
+    border-color: #FFDE00;
+}
+
+img{
+    border-style: groove;
+    border-color: black;
+}
+
+.show-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
 }

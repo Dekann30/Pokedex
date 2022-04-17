@@ -4,21 +4,27 @@
 <body>
     <div class="main">
         <h1>Pokedex</h1>
-        <button type="button" onclick='location.href="/pokedex/new"'>Add a Pokemon</button>
-        <button type="button" id="bottom">Jump to End</button>
+        <div class="top-buttons">
+        <button class='nav-button' type="button" onclick='location.href="/pokedex/new"'>Add a Pokemon</button>
+        <button class='nav-button' type="button" id="bottom">Jump to End</button>
+        </div>
         <ul>
             <% for(pokemon in allPokemon){ %>
                 <li>
                     <%=allPokemon[pokemon].name%>
                     <a href="/pokedex/<%=pokemon%>"><img src="<%=allPokemon[pokemon].img%>" alt="<%=allPokemon[pokemon].name%>'s picture" width="90" height="90"></a>
+                    <div class="pokebuttons">
                     <form action="/pokedex/<%=pokemon%>?_method=delete" method="post">
                     <input type="submit" value="Delete">
                     </form>
                     <button type="button" onclick="location.href='pokedex/<%=pokemon%>/edit'">Edit</button>
+                    </div>
                 </li>
            <% }%>
         </ul>
-        <button type="button" id="top">Jump to Top</button>
+        <div class="pokebuttons">
+        <button type="button" id="top"class='nav-button' >Jump to Top</button>
+        </div>
     </div>
 </body>
 </html>

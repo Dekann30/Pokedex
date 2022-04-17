@@ -2,11 +2,13 @@
 <html lang="en">
 <%- include('./partials/head.ejs') %> 
 <body>
+    <div class="show-main">
     <button type="button" onclick="location.href='/pokedex'">Back to Pokedex</button>
     <h1><%= onePokemon.name %> </h1>
     <%= onePokemon.id%>
     <img src='<%= onePokemon.img%>'>
-    <%= onePokemon.type%>
-    <%= onePokemon.stats.hp%>
+    Types: <%= onePokemon.type%> <br/>
+    HP: <%= onePokemon.stats.hp%>
+    </div>
 </body>
 </html>
