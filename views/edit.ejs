@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %> 
+<body>
+    <h1>Edit <%=onePokemon.name%>'s Entry</h1>
+    <form action="/pokedex/<%=index%>?_method=put" method="post">
+        <input type="text" name="name" value='<%=onePokemon.name%>'/><br/>
+        <input type="text" name="id" value='<%=onePokemon.id%>'/><br/>
+        <input type="text" name="img" value='<%=onePokemon.img%>'/><br/>
+        <input type="text" name="type" value='<%=onePokemon.type%>'/><br/>
+        <input type="text" name="hp" value='<%=onePokemon.stats.hp%>'/><br/>
+        <input type="submit" value="Update Pokedex">
+    </form>
+</body>
+</html>

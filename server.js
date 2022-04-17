@@ -35,6 +35,19 @@ app.delete('/pokedex/:id', (req,res)=>{
 })
 
 //Update
+app.put('/pokedex/:id', (req,res)=>{
+    editedPokemon = {
+        name: req.body.name,
+        id: req.body.id,
+        img: req.body.img,
+        type: req.body.type,
+        stats: {
+            hp: req.body.hp
+        }
+    }
+    Object.assign(editedPokemon, req.body)
+    res.redirect('/pokedex')
+})
 
 //Create
 app.post('/pokedex', (req,res)=>{
@@ -52,6 +65,9 @@ app.post('/pokedex', (req,res)=>{
 })
 
 //Edit
+app.get('/pokedex/:id/edit', (req,res)=>{
+    res.render('edit.ejs', {onePokemon: pokemon[req.params.id], index: req.params.id})
+})
 
 //Show
 app.get('/pokedex/:id', (req,res)=>{
